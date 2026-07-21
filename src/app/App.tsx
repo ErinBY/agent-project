@@ -237,23 +237,27 @@ function Section3() {
       </p>
 
       {/* Flow steps */}
-      <div className="relative">
-        <div className="absolute left-[19px] top-0 bottom-0 w-px bg-black/[0.06]" />
-        <div className="space-y-2">
-          {FLOW_STEPS.map((step, i) => {
-            const isOpen = active === step.id;
-            return (
-              <div key={step.id}>
+      <div className="space-y-0">
+        {FLOW_STEPS.map((step, i) => {
+          const isOpen = active === step.id;
+          const isLast = i === FLOW_STEPS.length - 1;
+          return (
+            <div key={step.id} className="flex gap-4">
+              {/* Rail: 번호 원 + 다음 단계로 이어지는 연결선 (같은 세로줄, 항상 중앙 정렬됨) */}
+              <div className="flex flex-col items-center shrink-0 w-9">
+                <div className={`w-9 h-9 rounded-full border flex items-center justify-center font-mono text-xs font-semibold shrink-0 ${isOpen ? typeBadge[step.type] + " border-current/30" : "bg-[#ffffff] border-black/10 text-[#75726c]"}`}>
+                  {step.id}
+                </div>
+                {!isLast && <div className="w-[2px] flex-1 min-h-[16px] bg-black/[0.10] my-1 rounded-full" />}
+              </div>
+
+              {/* 내용 컬럼 */}
+              <div className={`flex-1 min-w-0 ${isLast ? "" : "pb-2"}`}>
                 <button
                   onClick={() => setActive(isOpen ? null : step.id)}
-                  className={`w-full text-left flex items-start gap-4 p-4 rounded-lg border transition-all duration-200 ${isOpen ? typeStyle[step.type] + " " + (step.type === "gate" || step.type === "human" || step.type === "credit" ? "border-opacity-100" : "") : "border-black/[0.04] bg-transparent hover:bg-black/[0.02]"}`}
+                  className={`w-full text-left flex items-start gap-3 p-4 rounded-lg border transition-all duration-200 ${isOpen ? typeStyle[step.type] + " " + (step.type === "gate" || step.type === "human" || step.type === "credit" ? "border-opacity-100" : "") : "border-black/[0.04] bg-transparent hover:bg-black/[0.02]"}`}
                 >
-                  <div className="relative z-10 shrink-0">
-                    <div className={`w-9 h-9 rounded-full border flex items-center justify-center font-mono text-xs font-semibold ${isOpen ? typeBadge[step.type] + " border-current/30" : "bg-[#ffffff] border-black/10 text-[#75726c]"}`}>
-                      {step.id}
-                    </div>
-                  </div>
-                  <div className="flex-1 min-w-0 pt-1">
+                  <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-0.5">
                       <span className="text-[#2b2a28] font-medium text-sm">{step.label}</span>
                       <span className={`font-mono text-[11.5px] px-1.5 py-0.5 rounded tracking-wider ${typeBadge[step.type]}`}>{step.badge}</span>
@@ -265,7 +269,7 @@ function Section3() {
                   <ChevronDown size={14} className={`text-[#75726c] shrink-0 mt-1.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 {isOpen && (
-                  <div className={`ml-13 ml-[52px] mt-1 mb-2 p-4 rounded-lg border ${typeStyle[step.type]} text-[14.5px] space-y-3`}>
+                  <div className={`mt-1 mb-1 p-4 rounded-lg border ${typeStyle[step.type]} text-[14.5px] space-y-3`}>
                     <div>
                       <span className="font-mono text-[11.5px] text-[#75726c] tracking-widest block mb-1">INPUT</span>
                       <span className="text-[#55534f]">{step.input}</span>
@@ -282,16 +286,10 @@ function Section3() {
                     )}
                   </div>
                 )}
-                {/* connector arrows */}
-                {i < FLOW_STEPS.length - 1 && (
-                  <div className="flex items-center gap-2 pl-[19px] py-1">
-                    <div className="w-px h-4 bg-black/[0.06]" />
-                  </div>
-                )}
               </div>
-            );
-          })}
-        </div>
+            </div>
+          );
+        })}
       </div>
 
       <div className="mt-8 grid grid-cols-2 gap-3">
