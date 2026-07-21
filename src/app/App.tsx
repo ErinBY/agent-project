@@ -22,7 +22,7 @@ function Tag({ children, variant = "default" }: { children: React.ReactNode; var
     muted: "bg-black/[0.03] text-[#75726c] border border-black/5",
   };
   return (
-    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[11px] font-mono font-medium ${styles[variant]}`}>
+    <span className={`inline-flex items-center gap-1 px-2 py-0.5 rounded text-[12.5px] font-mono font-medium ${styles[variant]}`}>
       {children}
     </span>
   );
@@ -32,7 +32,7 @@ function SectionHeader({ num, title, subtitle }: { num: string; title: string; s
   return (
     <div className="mb-10">
       <div className="flex items-baseline gap-4 mb-2">
-        <span className="font-mono text-[11px] text-[#b8862e] tracking-widest">{num}</span>
+        <span className="font-mono text-[12.5px] text-[#b8862e] tracking-widest">{num}</span>
         <div className="h-px flex-1 bg-[#b8862e]/20" />
       </div>
       <h2 className="text-2xl font-medium text-[#2b2a28] tracking-tight">{title}</h2>
@@ -65,7 +65,7 @@ function Section1() {
     <section id="s1" className="mb-20">
       <SectionHeader num="SECTION 01" title="개선 과제 정의" />
 
-      <div className="space-y-5 text-[#55534f] leading-[1.85] text-[14.5px] mb-8">
+      <div className="space-y-5 text-[#55534f] leading-[1.85] text-[16px] mb-8">
         <p>
           ModoAI의 이미지 수정은 텍스트 입력창 하나로 여러 요청을 한 번에 받습니다. 그릇 교체, 테이블보 변경, 소품 추가까지 6가지를 한 번에 요청했을 때 반영 품질은 기대 이상이었습니다. <strong className="text-[#2b2a28] font-medium">문제는 반영이 아니라 다른 곳에 있었습니다.</strong>
         </p>
@@ -80,14 +80,14 @@ function Section1() {
             <span className="font-mono text-[#b8862e] text-sm mt-0.5 shrink-0">{p.icon}</span>
             <div>
               <div className="text-[#2b2a28] text-sm font-medium mb-1">{p.title}</div>
-              <div className="text-[#75726c] text-[13px] leading-relaxed">{p.body}</div>
+              <div className="text-[#75726c] text-[14.5px] leading-relaxed">{p.body}</div>
             </div>
           </div>
         ))}
       </div>
 
       <div className="p-5 rounded-lg border border-[#b8862e]/25 bg-[#b8862e]/5">
-        <div className="font-mono text-[10px] text-[#b8862e] tracking-widest mb-2">MISSION STATEMENT</div>
+        <div className="font-mono text-[11.5px] text-[#b8862e] tracking-widest mb-2">MISSION STATEMENT</div>
         <p className="text-[#2b2a28] text-sm leading-relaxed">
           모호한 수정 요청을 실행 전에 구체화하고, 실행 후에는 해석이 의도와 맞았는지 제품이 스스로 검증하는 <strong>'수정 에이전트'</strong>를 설계한다.
         </p>
@@ -111,7 +111,7 @@ function Section2() {
       <SectionHeader num="SECTION 02" title="목표와 성공 기준" />
 
       <div className="p-4 rounded-lg bg-[#f0eee7] border border-black/[0.06] mb-8">
-        <div className="font-mono text-[10px] text-[#75726c] tracking-widest mb-2">OBJECTIVE</div>
+        <div className="font-mono text-[11.5px] text-[#75726c] tracking-widest mb-2">OBJECTIVE</div>
         <p className="text-[#2b2a28] text-sm leading-relaxed">
           셀러가 프롬프트 실력 없이도, 최소한의 크레딧으로 의도한 결과에 도달하게 한다.<br />
           <span className="text-[#75726c]">모호함은 실행 전에 풀고, 해석이 맞았는지는 사용자가 아니라 제품이 확인합니다.</span>
@@ -119,12 +119,12 @@ function Section2() {
       </div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-[13px]">
+        <table className="w-full text-[14.5px]">
           <thead>
             <tr className="border-b border-black/[0.07]">
-              <th className="text-left py-3 px-4 font-mono text-[10px] text-[#75726c] tracking-widest">METRIC</th>
-              <th className="text-left py-3 px-4 font-mono text-[10px] text-[#75726c] tracking-widest">DEFINITION</th>
-              <th className="text-center py-3 px-4 font-mono text-[10px] text-[#75726c] tracking-widest">방향</th>
+              <th className="text-left py-3 px-4 font-mono text-[11.5px] text-[#75726c] tracking-widest">METRIC</th>
+              <th className="text-left py-3 px-4 font-mono text-[11.5px] text-[#75726c] tracking-widest">DEFINITION</th>
+              <th className="text-left py-3 px-4 font-mono text-[12.5px] text-[#75726c] tracking-widest w-[130px]">방향</th>
             </tr>
           </thead>
           <tbody>
@@ -134,12 +134,12 @@ function Section2() {
                 <td className="py-3.5 px-4 text-[#75726c] leading-relaxed">{m.def}</td>
                 <td className="py-3.5 px-4 text-center">
                   {m.dir === "up" ? (
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600 text-white font-semibold text-[12px] shadow-sm">
-                      <ArrowUp size={14} strokeWidth={3} /> 올라야 함
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-emerald-600 text-white font-semibold text-[13.5px] shadow-sm whitespace-nowrap">
+                      <ArrowUp size={14} strokeWidth={3} /> 높을수록 좋음
                     </span>
                   ) : (
-                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-600 text-white font-semibold text-[12px] shadow-sm">
-                      <ArrowDown size={14} strokeWidth={3} /> 내려야 함
+                    <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-red-600 text-white font-semibold text-[13.5px] shadow-sm whitespace-nowrap">
+                      <ArrowDown size={14} strokeWidth={3} /> 낮을수록 좋음
                     </span>
                   )}
                 </td>
@@ -150,7 +150,7 @@ function Section2() {
       </div>
 
       <div className="mt-6 p-4 rounded-lg bg-[#ffffff] border border-black/[0.06]">
-        <p className="text-[13px] text-[#75726c] leading-relaxed">
+        <p className="text-[14.5px] text-[#75726c] leading-relaxed">
           <strong className="text-[#55534f]">구체화 단계 응답률</strong>을 지표에 넣은 이유: 되묻기가 너무 잦으면 그 자체가 마찰이 됩니다. 이 숫자가 낮으면 되묻는 기준을 완화하라는 신호로 씁니다.
         </p>
       </div>
@@ -232,7 +232,7 @@ function Section3() {
     <section id="s3" className="mb-20">
       <SectionHeader num="SECTION 03" title="Agentic Workflow" subtitle="수정 에이전트는 어떤 순서로 일하는가" />
 
-      <p className="text-[13.5px] text-[#75726c] leading-relaxed mb-8">
+      <p className="text-[15px] text-[#75726c] leading-relaxed mb-8">
         사용자 요청 입력부터 결과 전달까지 <strong className="text-[#55534f]">6단계, 2개의 관문</strong>으로 이루어집니다. 각 단계를 클릭해 상세 내용을 확인하세요.
       </p>
 
@@ -256,27 +256,27 @@ function Section3() {
                   <div className="flex-1 min-w-0 pt-1">
                     <div className="flex items-center gap-2 mb-0.5">
                       <span className="text-[#2b2a28] font-medium text-sm">{step.label}</span>
-                      <span className={`font-mono text-[10px] px-1.5 py-0.5 rounded tracking-wider ${typeBadge[step.type]}`}>{step.badge}</span>
+                      <span className={`font-mono text-[11.5px] px-1.5 py-0.5 rounded tracking-wider ${typeBadge[step.type]}`}>{step.badge}</span>
                       {(step.type === "human") && <Tag variant="blue">Human-in-the-loop</Tag>}
                       {(step.type === "credit") && <Tag variant="amber">크레딧 차감</Tag>}
                     </div>
-                    <p className="text-[#75726c] text-[13px]">{step.desc}</p>
+                    <p className="text-[#75726c] text-[14.5px]">{step.desc}</p>
                   </div>
                   <ChevronDown size={14} className={`text-[#75726c] shrink-0 mt-1.5 transition-transform duration-200 ${isOpen ? "rotate-180" : ""}`} />
                 </button>
                 {isOpen && (
-                  <div className={`ml-13 ml-[52px] mt-1 mb-2 p-4 rounded-lg border ${typeStyle[step.type]} text-[13px] space-y-3`}>
+                  <div className={`ml-13 ml-[52px] mt-1 mb-2 p-4 rounded-lg border ${typeStyle[step.type]} text-[14.5px] space-y-3`}>
                     <div>
-                      <span className="font-mono text-[10px] text-[#75726c] tracking-widest block mb-1">INPUT</span>
+                      <span className="font-mono text-[11.5px] text-[#75726c] tracking-widest block mb-1">INPUT</span>
                       <span className="text-[#55534f]">{step.input}</span>
                     </div>
                     <div>
-                      <span className="font-mono text-[10px] text-[#75726c] tracking-widest block mb-1">OUTPUT</span>
+                      <span className="font-mono text-[11.5px] text-[#75726c] tracking-widest block mb-1">OUTPUT</span>
                       <span className="text-[#55534f]">{step.output}</span>
                     </div>
                     {step.onFail !== "—" && (
                       <div>
-                        <span className="font-mono text-[10px] text-[#75726c] tracking-widest block mb-1">실패하면</span>
+                        <span className="font-mono text-[11.5px] text-[#75726c] tracking-widest block mb-1">실패하면</span>
                         <span className="text-[#75726c]">{step.onFail}</span>
                       </div>
                     )}
@@ -296,14 +296,14 @@ function Section3() {
 
       <div className="mt-8 grid grid-cols-2 gap-3">
         <div className="p-4 rounded-lg bg-[#ffffff] border border-black/[0.06]">
-          <div className="font-mono text-[10px] text-[#b8862e] tracking-widest mb-2">DESIGN DECISION</div>
-          <p className="text-[13px] text-[#75726c] leading-relaxed">
+          <div className="font-mono text-[11.5px] text-[#b8862e] tracking-widest mb-2">DESIGN DECISION</div>
+          <p className="text-[14.5px] text-[#75726c] leading-relaxed">
             3단계 구체화는 <strong className="text-[#55534f]">"해석이 하나로 정해지지 않는 항목"만</strong> 되묻습니다. "나이프 추가"는 묻지 않고 바로 실행합니다.
           </p>
         </div>
         <div className="p-4 rounded-lg bg-[#ffffff] border border-black/[0.06]">
-          <div className="font-mono text-[10px] text-[#b8862e] tracking-widest mb-2">CREDIT TIMING</div>
-          <p className="text-[13px] text-[#75726c] leading-relaxed">
+          <div className="font-mono text-[11.5px] text-[#b8862e] tracking-widest mb-2">CREDIT TIMING</div>
+          <p className="text-[14.5px] text-[#75726c] leading-relaxed">
             크레딧 차감 시점을 <strong className="text-[#55534f]">검증 통과 후 전달 시점</strong>으로 뒤로 옮겼습니다. 검증·재시도 비용은 제품이 부담합니다.
           </p>
         </div>
@@ -327,7 +327,7 @@ function Section4() {
   const content: Record<string, React.ReactNode> = {
     context: (
       <div className="space-y-4">
-        <p className="text-[13.5px] text-[#75726c] leading-relaxed">
+        <p className="text-[15px] text-[#75726c] leading-relaxed">
           수정 작업 하나를 맡길 때마다 에이전트에게 <strong className="text-[#55534f]">네 가지</strong>를 줍니다.
         </p>
         <div className="grid grid-cols-2 gap-2">
@@ -340,19 +340,19 @@ function Section4() {
             <div key={item.n} className="p-3 rounded-lg bg-[#f0eee7] border border-black/[0.05]">
               <div className="font-mono text-[#b8862e] text-xs mb-1">{item.n}</div>
               <div className="text-[#2b2a28] text-sm font-medium">{item.t}</div>
-              <div className="text-[#75726c] text-[12px] mt-0.5">{item.d}</div>
+              <div className="text-[#75726c] text-[13.5px] mt-0.5">{item.d}</div>
             </div>
           ))}
         </div>
         <div className="p-3 rounded-lg bg-red-500/[0.06] border border-red-500/15 flex items-start gap-2">
           <AlertTriangle size={14} className="text-red-600 mt-0.5 shrink-0" />
-          <p className="text-[13px] text-red-600 leading-relaxed">
+          <p className="text-[14.5px] text-red-600 leading-relaxed">
             <strong>경고:</strong> 배경·소품·테이블보는 바꿔도 되지만, <strong>제품 자체는 건드리지 마.</strong>
           </p>
         </div>
         <div className="p-3 rounded-lg bg-[#f0eee7] border border-black/[0.05]">
-          <div className="font-mono text-[10px] text-[#75726c] tracking-widest mb-2">컨셉이 해석을 바꾸는 예시</div>
-          <div className="grid grid-cols-2 gap-2 text-[12px]">
+          <div className="font-mono text-[11.5px] text-[#75726c] tracking-widest mb-2">컨셉이 해석을 바꾸는 예시</div>
+          <div className="grid grid-cols-2 gap-2 text-[13.5px]">
             <div className="p-2 rounded bg-[#b8862e]/5 border border-[#b8862e]/15">
               <div className="text-[#b8862e] font-medium mb-1">브런치 컨셉</div>
               <div className="text-[#75726c]">"밝게" → 아이보리 린넨 (따뜻한 톤)</div>
@@ -367,35 +367,35 @@ function Section4() {
     ),
     memory: (
       <div className="space-y-4">
-        <p className="text-[13.5px] text-[#75726c] leading-relaxed">
+        <p className="text-[15px] text-[#75726c] leading-relaxed">
           카페 직원이 단골을 기억하듯, 에이전트도 구체화 단계에서 고른 선택을 기억합니다.
         </p>
         <div className="p-4 rounded-lg bg-[#f0eee7] border border-black/[0.05]">
-          <div className="font-mono text-[10px] text-[#75726c] tracking-widest mb-3">MEMORY RULE</div>
+          <div className="font-mono text-[11.5px] text-[#75726c] tracking-widest mb-3">MEMORY RULE</div>
           <div className="space-y-3">
             <div className="flex items-start gap-3">
               <div className="w-6 h-6 rounded-full bg-[#b8862e]/15 border border-[#b8862e]/30 flex items-center justify-center shrink-0">
-                <span className="font-mono text-[#b8862e] text-[10px]">3×</span>
+                <span className="font-mono text-[#b8862e] text-[11.5px]">3×</span>
               </div>
               <div>
                 <div className="text-[#2b2a28] text-sm font-medium">취향으로 승격 조건</div>
-                <div className="text-[#75726c] text-[12px] mt-0.5">같은 계열의 선택이 3번 쌓이면 취향으로 인정, 다음 방문부터 첫 번째 선택지로 올려줌</div>
+                <div className="text-[#75726c] text-[13.5px] mt-0.5">같은 계열의 선택이 3번 쌓이면 취향으로 인정, 다음 방문부터 첫 번째 선택지로 올려줌</div>
               </div>
             </div>
             <div className="flex items-start gap-3">
               <div className="w-6 h-6 rounded-full bg-black/5 border border-black/10 flex items-center justify-center shrink-0">
-                <span className="font-mono text-[#75726c] text-[10px]">1×</span>
+                <span className="font-mono text-[#75726c] text-[11.5px]">1×</span>
               </div>
               <div>
                 <div className="text-[#2b2a28] text-sm font-medium">단발성 선택</div>
-                <div className="text-[#75726c] text-[12px] mt-0.5">한 번뿐인 선택은 그날만 쓰고 버림 ("크리스마스 느낌으로"를 취향으로 저장하지 않음)</div>
+                <div className="text-[#75726c] text-[13.5px] mt-0.5">한 번뿐인 선택은 그날만 쓰고 버림 ("크리스마스 느낌으로"를 취향으로 저장하지 않음)</div>
               </div>
             </div>
           </div>
         </div>
         <div className="p-3 rounded-lg bg-blue-500/[0.06] border border-blue-500/15">
-          <div className="font-mono text-[10px] text-blue-600 tracking-widest mb-1">기억하되, 갇히지 않게</div>
-          <p className="text-[13px] text-[#75726c]">
+          <div className="font-mono text-[11.5px] text-blue-600 tracking-widest mb-1">기억하되, 갇히지 않게</div>
+          <p className="text-[14.5px] text-[#75726c]">
             취향이 저장된 뒤에도 선택지에 항상 <strong className="text-[#55534f]">다른 분위기의 옵션</strong>을 하나 섞어둡니다. 취향은 편하라고 있는 기본값이지, 사용자를 가두는 틀이 아닙니다.
           </p>
         </div>
@@ -403,7 +403,7 @@ function Section4() {
     ),
     tools: (
       <div className="space-y-4">
-        <p className="text-[13.5px] text-[#75726c] leading-relaxed">에이전트는 스스로 그림을 그리지 못합니다. 판단을 하고, 프로그램을 부릅니다.</p>
+        <p className="text-[15px] text-[#75726c] leading-relaxed">에이전트는 스스로 그림을 그리지 못합니다. 판단을 하고, 프로그램을 부릅니다.</p>
         <div className="space-y-2">
           {[
             { icon: <Zap size={14} />, name: "이미지 편집 모델", desc: "이미지를 실제로 고치는 생성 모델. 크고 비쌈", tag: "HEAVY", tagStyle: "text-[#b8862e] bg-[#b8862e]/10" },
@@ -415,46 +415,46 @@ function Section4() {
               <div className="flex-1">
                 <div className="flex items-center gap-2 mb-0.5">
                   <span className="text-[#2b2a28] text-sm font-medium">{tool.name}</span>
-                  <span className={`font-mono text-[10px] px-1.5 py-0.5 rounded ${tool.tagStyle}`}>{tool.tag}</span>
+                  <span className={`font-mono text-[11.5px] px-1.5 py-0.5 rounded ${tool.tagStyle}`}>{tool.tag}</span>
                 </div>
-                <p className="text-[#75726c] text-[12px]">{tool.desc}</p>
+                <p className="text-[#75726c] text-[13.5px]">{tool.desc}</p>
               </div>
             </div>
           ))}
         </div>
         <div className="p-3 rounded-lg bg-[#ffffff] border border-black/[0.06]">
-          <p className="text-[12px] text-[#75726c]">도구 호출 자체가 실패(무응답·오류)하면 크레딧 차감 없이 처리합니다. 상세 정책은 섹션 05 참고.</p>
+          <p className="text-[13.5px] text-[#75726c]">도구 호출 자체가 실패(무응답·오류)하면 크레딧 차감 없이 처리합니다. 상세 정책은 섹션 05 참고.</p>
         </div>
       </div>
     ),
     eval: (
       <div className="space-y-4">
-        <p className="text-[13.5px] text-[#75726c] leading-relaxed">이 에이전트의 검수는 딱 두 가지를 봅니다.</p>
+        <p className="text-[15px] text-[#75726c] leading-relaxed">이 에이전트의 검수는 딱 두 가지를 봅니다.</p>
         <div className="grid grid-cols-1 gap-3">
           <div className="p-4 rounded-lg bg-emerald-500/[0.05] border border-emerald-500/15">
             <div className="flex items-center gap-2 mb-2">
               <Check size={14} className="text-emerald-600" />
               <span className="text-emerald-600 font-medium text-sm">① 시킨 건 됐나</span>
             </div>
-            <p className="text-[13px] text-[#75726c]">"나이프 추가해줘"라고 했으면 결과에 나이프가 있는지 확인. 항목별로 하나씩 봅니다.</p>
+            <p className="text-[14.5px] text-[#75726c]">"나이프 추가해줘"라고 했으면 결과에 나이프가 있는지 확인. 항목별로 하나씩 봅니다.</p>
           </div>
           <div className="p-4 rounded-lg bg-red-500/[0.05] border border-red-500/15">
             <div className="flex items-center gap-2 mb-2">
               <X size={14} className="text-red-600" />
               <span className="text-red-600 font-medium text-sm">② 안 시킨 걸 건드렸나</span>
             </div>
-            <p className="text-[13px] text-[#75726c]">제품 모양·색이 변하지 않았는지, AI 특유의 결함(손가락 6개 등)이 생기지 않았는지 확인.</p>
+            <p className="text-[14.5px] text-[#75726c]">제품 모양·색이 변하지 않았는지, AI 특유의 결함(손가락 6개 등)이 생기지 않았는지 확인.</p>
           </div>
         </div>
         <div className="p-4 rounded-lg bg-[#b8862e]/5 border border-[#b8862e]/20">
-          <div className="font-mono text-[10px] text-[#b8862e] tracking-widest mb-2">SUCCESS = ① AND ②</div>
-          <p className="text-[13px] text-[#55534f]">①만 보면 "나이프는 있는데 에그타르트가 찌그러진" 이미지가 통과됩니다. ②만 보면 "제품은 멀쩡한데 나이프를 무시한" 이미지가 통과됩니다. 두 검사를 모두 통과한 것만 성공입니다.</p>
+          <div className="font-mono text-[11.5px] text-[#b8862e] tracking-widest mb-2">SUCCESS = ① AND ②</div>
+          <p className="text-[14.5px] text-[#55534f]">①만 보면 "나이프는 있는데 에그타르트가 찌그러진" 이미지가 통과됩니다. ②만 보면 "제품은 멀쩡한데 나이프를 무시한" 이미지가 통과됩니다. 두 검사를 모두 통과한 것만 성공입니다.</p>
         </div>
       </div>
     ),
     hitl: (
       <div className="space-y-4">
-        <p className="text-[13.5px] text-[#75726c] leading-relaxed">이 에이전트가 반드시 사용자에게 물어보는 지점은 세 곳입니다.</p>
+        <p className="text-[15px] text-[#75726c] leading-relaxed">이 에이전트가 반드시 사용자에게 물어보는 지점은 세 곳입니다.</p>
         <div className="space-y-2">
           {[
             { n: "①", when: "실행 전", desc: "요청이 모호하면 해석 선택지를 보여주고 고르게 합니다.", tag: "구체화 칩" },
@@ -468,13 +468,13 @@ function Section4() {
                   <span className="text-[#2b2a28] text-sm font-medium">{item.when}</span>
                   <Tag variant="blue">{item.tag}</Tag>
                 </div>
-                <p className="text-[#75726c] text-[12px]">{item.desc}</p>
+                <p className="text-[#75726c] text-[13.5px]">{item.desc}</p>
               </div>
             </div>
           ))}
         </div>
         <div className="p-3 rounded-lg bg-[#b8862e]/5 border border-[#b8862e]/20">
-          <p className="text-[13px] text-[#55534f]">
+          <p className="text-[14.5px] text-[#55534f]">
             <strong>공통 원칙:</strong> <span className="text-[#75726c]">돈(크레딧)이 걸린 결정과 제품이 걸린 결정은 AI가 대신하지 않는다. 자동화는 사용자의 수고를 줄이는 것이지, 결정권을 가져가는 게 아닙니다.</span>
           </p>
         </div>
@@ -491,7 +491,7 @@ function Section4() {
           <button
             key={t.id}
             onClick={() => setTab(t.id)}
-            className={`flex items-center gap-1.5 px-3 py-2 rounded-md text-[12px] font-medium whitespace-nowrap transition-all duration-150 ${tab === t.id ? "bg-[#c9992f] text-[#2b2a28]" : "text-[#75726c] hover:text-[#55534f] hover:bg-black/[0.04]"}`}
+            className={`flex items-center gap-1.5 px-3 py-2 rounded-md text-[13.5px] font-medium whitespace-nowrap transition-all duration-150 ${tab === t.id ? "bg-[#c9992f] text-[#2b2a28]" : "text-[#75726c] hover:text-[#55534f] hover:bg-black/[0.04]"}`}
           >
             {t.icon} {t.label}
           </button>
@@ -518,7 +518,7 @@ const creditBadge = (type: PolicyRow["creditType"]) => {
     na: { label: "—", cls: "text-[#75726c] bg-transparent" },
   };
   const v = map[type];
-  return <span className={`font-mono text-[10px] px-1.5 py-0.5 rounded ${v.cls}`}>{v.label}</span>;
+  return <span className={`font-mono text-[11.5px] px-1.5 py-0.5 rounded ${v.cls}`}>{v.label}</span>;
 };
 
 const S5_CATEGORIES = [
@@ -563,8 +563,8 @@ function Section5() {
       <SectionHeader num="SECTION 05" title="정책·예외 케이스" subtitle="틀리면 어떻게 되는가" />
 
       <div className="p-4 rounded-lg bg-[#b8862e]/5 border border-[#b8862e]/20 mb-6">
-        <div className="font-mono text-[10px] text-[#b8862e] tracking-widest mb-1">PRINCIPLE</div>
-        <p className="text-[13.5px] text-[#2b2a28]">비용은 성공한 결과에만 발생한다.</p>
+        <div className="font-mono text-[11.5px] text-[#b8862e] tracking-widest mb-1">PRINCIPLE</div>
+        <p className="text-[15px] text-[#2b2a28]">비용은 성공한 결과에만 발생한다.</p>
       </div>
 
       <div className="flex gap-1 mb-5">
@@ -572,21 +572,21 @@ function Section5() {
           <button
             key={c.id}
             onClick={() => setCat(c.id)}
-            className={`px-3 py-2 rounded-md text-[12px] font-medium transition-all duration-150 ${cat === c.id ? "bg-[#f0eee7] text-[#2b2a28] border border-black/10" : "text-[#75726c] hover:text-[#55534f]"}`}
+            className={`px-3 py-2 rounded-md text-[13.5px] font-medium transition-all duration-150 ${cat === c.id ? "bg-[#f0eee7] text-[#2b2a28] border border-black/10" : "text-[#75726c] hover:text-[#55534f]"}`}
           >
             {c.label}
           </button>
         ))}
       </div>
 
-      <div className="text-[12px] text-[#75726c] mb-4 font-mono">{current.desc}</div>
+      <div className="text-[13.5px] text-[#75726c] mb-4 font-mono">{current.desc}</div>
 
       <div className="overflow-x-auto">
-        <table className="w-full text-[12.5px]">
+        <table className="w-full text-[14px]">
           <thead>
             <tr className="border-b border-black/[0.07]">
               {["케이스", "시스템 동작", "사용자에게 보이는 것", "크레딧"].map((h) => (
-                <th key={h} className="text-left py-2.5 px-3 font-mono text-[10px] text-[#75726c] tracking-wider whitespace-nowrap">{h}</th>
+                <th key={h} className="text-left py-2.5 px-3 font-mono text-[11.5px] text-[#75726c] tracking-wider whitespace-nowrap">{h}</th>
               ))}
             </tr>
           </thead>
@@ -604,7 +604,7 @@ function Section5() {
       </div>
 
       <div className="mt-6 space-y-2">
-        <div className="font-mono text-[10px] text-[#75726c] tracking-widest mb-3">4가지 관통 원칙</div>
+        <div className="font-mono text-[11.5px] text-[#75726c] tracking-widest mb-3">4가지 관통 원칙</div>
         {[
           "실행 전에 막을 수 있는 문제는 실행 전에 막는다.",
           "제품의 실패 비용을 사용자에게 넘기지 않는다.",
@@ -612,8 +612,8 @@ function Section5() {
           "작업의 기준은 화면이 아니라 서버다.",
         ].map((rule, i) => (
           <div key={i} className="flex gap-3 items-start py-2 border-b border-black/[0.04]">
-            <span className="font-mono text-[#b8862e] text-[11px] shrink-0 mt-0.5">{i + 1}.</span>
-            <span className="text-[13px] text-[#55534f]">{rule}</span>
+            <span className="font-mono text-[#b8862e] text-[12.5px] shrink-0 mt-0.5">{i + 1}.</span>
+            <span className="text-[14.5px] text-[#55534f]">{rule}</span>
           </div>
         ))}
       </div>
@@ -634,34 +634,34 @@ const SCREENS = [
       { label: "제품 변경", desc: "경고 확인 대기", variant: "red" as const },
     ],
     mockup: (
-      <div className="p-4 rounded-lg bg-[#faf8f4] border border-black/10 text-[12px] space-y-3">
-        <div className="text-[#75726c] font-mono text-[10px] tracking-widest mb-2">EDIT REQUEST INPUT</div>
+      <div className="p-4 rounded-lg bg-[#faf8f4] border border-black/10 text-[13.5px] space-y-3">
+        <div className="text-[#75726c] font-mono text-[11.5px] tracking-widest mb-2">EDIT REQUEST INPUT</div>
         <div className="p-3 rounded bg-[#f0eee7] border border-black/[0.06] text-[#55534f] italic">
           "그릇은 모던하게, 테이블보는 밝게, 나이프 추가해줘"
         </div>
-        <div className="text-[#75726c] text-[11px]">→ 요청 분해 결과:</div>
+        <div className="text-[#75726c] text-[12.5px]">→ 요청 분해 결과:</div>
         <div className="flex flex-wrap gap-2">
           <span className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#f0eee7] border border-black/10 text-[#55534f]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#75726c]" /> 그릇 교체
-            <span className="text-[10px] text-[#b8862e] font-mono ml-1">?</span>
+            <span className="text-[11.5px] text-[#b8862e] font-mono ml-1">?</span>
           </span>
           <span className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-[#f0eee7] border border-black/10 text-[#55534f]">
             <span className="w-1.5 h-1.5 rounded-full bg-[#75726c]" /> 테이블보 변경
-            <span className="text-[10px] text-[#b8862e] font-mono ml-1">?</span>
+            <span className="text-[11.5px] text-[#b8862e] font-mono ml-1">?</span>
           </span>
           <span className="flex items-center gap-1.5 px-2.5 py-1.5 rounded-full bg-emerald-500/10 border border-emerald-500/20 text-emerald-600">
             <Check size={10} /> 나이프 추가
           </span>
         </div>
         <div className="p-2.5 rounded bg-[#b8862e]/5 border border-[#b8862e]/15 text-[#75726c]">
-          <div className="text-[#b8862e] text-[10px] font-mono mb-1">"테이블보를 밝게"란?</div>
+          <div className="text-[#b8862e] text-[11.5px] font-mono mb-1">"테이블보를 밝게"란?</div>
           <div className="flex flex-wrap gap-1.5 mt-1">
             {["아이보리 린넨", "순백", "라이트 그레이", "직접 입력"].map((opt) => (
               <span key={opt} className="px-2 py-1 rounded border border-black/10 bg-black/[0.03] text-[#55534f] cursor-pointer hover:border-[#b8862e]/40 hover:text-[#b8862e] transition-colors">{opt}</span>
             ))}
           </div>
         </div>
-        <button className="w-full py-2 rounded bg-[#f0eee7] border border-black/[0.06] text-[#75726c] text-[11px] cursor-not-allowed">
+        <button className="w-full py-2 rounded bg-[#f0eee7] border border-black/[0.06] text-[#75726c] text-[12.5px] cursor-not-allowed">
           모든 항목이 확정되면 실행 활성화됩니다
         </button>
       </div>
@@ -679,8 +679,8 @@ const SCREENS = [
       { label: "실패", desc: "", variant: "red" as const },
     ],
     mockup: (
-      <div className="p-4 rounded-lg bg-[#faf8f4] border border-black/10 text-[12px] space-y-3">
-        <div className="text-[#75726c] font-mono text-[10px] tracking-widest mb-2">PROGRESS</div>
+      <div className="p-4 rounded-lg bg-[#faf8f4] border border-black/10 text-[13.5px] space-y-3">
+        <div className="text-[#75726c] font-mono text-[11.5px] tracking-widest mb-2">PROGRESS</div>
         {[
           { label: "그릇 교체", status: "완료", icon: <Check size={11} />, cls: "text-emerald-600 bg-emerald-500/10" },
           { label: "테이블보 변경", status: "완료", icon: <Check size={11} />, cls: "text-emerald-600 bg-emerald-500/10" },
@@ -688,12 +688,12 @@ const SCREENS = [
         ].map((item) => (
           <div key={item.label} className="flex items-center justify-between p-2.5 rounded bg-[#f0eee7] border border-black/[0.05]">
             <span className="text-[#55534f]">{item.label}</span>
-            <span className={`flex items-center gap-1.5 px-2 py-0.5 rounded text-[11px] font-mono ${item.cls}`}>
+            <span className={`flex items-center gap-1.5 px-2 py-0.5 rounded text-[12.5px] font-mono ${item.cls}`}>
               {item.icon} {item.status}
             </span>
           </div>
         ))}
-        <div className="p-2.5 rounded bg-[#f0eee7] border border-black/[0.04] text-[#75726c] text-[11px] text-center animate-pulse">
+        <div className="p-2.5 rounded bg-[#f0eee7] border border-black/[0.04] text-[#75726c] text-[12.5px] text-center animate-pulse">
           결과를 확인하고 있어요...
         </div>
       </div>
@@ -710,10 +710,10 @@ const SCREENS = [
       { label: "이의 접수", desc: "", variant: "blue" as const },
     ],
     mockup: (
-      <div className="p-4 rounded-lg bg-[#faf8f4] border border-black/10 text-[12px] space-y-3">
-        <div className="text-[#75726c] font-mono text-[10px] tracking-widest mb-2">RESULT — PARTIAL FAILURE</div>
+      <div className="p-4 rounded-lg bg-[#faf8f4] border border-black/10 text-[13.5px] space-y-3">
+        <div className="text-[#75726c] font-mono text-[11.5px] tracking-widest mb-2">RESULT — PARTIAL FAILURE</div>
         <div className="p-3 rounded bg-[#f0eee7] border border-black/[0.06]">
-          <div className="text-[#b8862e] text-[11px] font-mono mb-2">3개 중 2개가 반영됐어요</div>
+          <div className="text-[#b8862e] text-[12.5px] font-mono mb-2">3개 중 2개가 반영됐어요</div>
           <div className="space-y-1.5">
             <div className="flex items-center gap-2 text-emerald-600"><Check size={11} /> 그릇 교체</div>
             <div className="flex items-center gap-2 text-emerald-600"><Check size={11} /> 테이블보 변경</div>
@@ -734,7 +734,7 @@ const SCREENS = [
             <Tag variant="muted">차감 없음</Tag>
           </button>
         </div>
-        <button className="w-full text-center text-[#75726c] hover:text-[#55534f] text-[11px] border-t border-black/[0.04] pt-2 transition-colors">
+        <button className="w-full text-center text-[#75726c] hover:text-[#55534f] text-[12.5px] border-t border-black/[0.04] pt-2 transition-colors">
           결과가 달라요 →
         </button>
       </div>
@@ -750,7 +750,7 @@ function Section6() {
     <section id="s6" className="mb-20">
       <SectionHeader num="SECTION 06" title="화면 설계" subtitle="사용자 눈에는 어떻게 보이는가" />
 
-      <p className="text-[13.5px] text-[#75726c] leading-relaxed mb-6">
+      <p className="text-[15px] text-[#75726c] leading-relaxed mb-6">
         에이전트가 아무리 잘 일해도, 사용자가 보는 건 화면뿐입니다. 지금의 ModoAI는 중간이 보이지 않습니다. 이 에이전트는 <strong className="text-[#55534f]">중간을 보여줍니다.</strong>
       </p>
 
@@ -759,7 +759,7 @@ function Section6() {
           <button
             key={s.id}
             onClick={() => setScreen(s.id)}
-            className={`flex-1 py-2.5 px-3 rounded-md text-[12px] font-medium transition-all duration-150 text-center ${screen === s.id ? "bg-[#f0eee7] text-[#2b2a28] border border-black/10" : "text-[#75726c] hover:text-[#55534f]"}`}
+            className={`flex-1 py-2.5 px-3 rounded-md text-[13.5px] font-medium transition-all duration-150 text-center ${screen === s.id ? "bg-[#f0eee7] text-[#2b2a28] border border-black/10" : "text-[#75726c] hover:text-[#55534f]"}`}
           >
             화면 {s.id}
           </button>
@@ -767,9 +767,9 @@ function Section6() {
       </div>
 
       <div className="p-5 rounded-lg border border-black/[0.07] bg-[#ffffff]">
-        <div className="font-mono text-[10px] text-[#b8862e] tracking-widest mb-1">{`SCREEN ${current.id}`}</div>
+        <div className="font-mono text-[11.5px] text-[#b8862e] tracking-widest mb-1">{`SCREEN ${current.id}`}</div>
         <h3 className="text-[#2b2a28] font-medium mb-0.5">{current.title}</h3>
-        <p className="text-[12px] text-[#75726c] mb-4">{current.subtitle}</p>
+        <p className="text-[13.5px] text-[#75726c] mb-4">{current.subtitle}</p>
 
         <div className="flex flex-wrap gap-2 mb-5">
           {current.states.map((s) => (
@@ -780,8 +780,8 @@ function Section6() {
         {current.mockup}
 
         <div className="mt-4 p-3 rounded bg-[#f0eee7] border border-black/[0.05]">
-          <div className="font-mono text-[10px] text-[#75726c] tracking-widest mb-1">설계 의도</div>
-          <p className="text-[12px] text-[#75726c]">
+          <div className="font-mono text-[11.5px] text-[#75726c] tracking-widest mb-1">설계 의도</div>
+          <p className="text-[13.5px] text-[#75726c]">
             {current.id === 1 && "실행 버튼은 모든 칩이 확정 상태가 되어야 활성화됩니다. 크레딧이 쓰이기 전에 해석을 확정 짓는 구조를 화면으로 강제합니다."}
             {current.id === 2 && "재시도가 몇 번째인지(1/2)까지 보여주는 이유는 기다림에 근거를 주기 위해서입니다. 사용자가 창을 닫아도 이 상태는 서버에 남아 재접속 시 복원됩니다."}
             {current.id === 3 && '실패를 숨기지 않고 선택지로 바꾸는 것. "안 됐다"로 끝나면 불만이지만, "여기까지 됐고, 다음은 당신이 정한다"면 통제감이 됩니다.'}
@@ -834,7 +834,7 @@ function Section7() {
     <section id="s7" className="mb-20">
       <SectionHeader num="SECTION 07" title="원가·운영 관점" subtitle="이걸 돌리면 돈이 얼마나 드는가" />
 
-      <p className="text-[13.5px] text-[#75726c] leading-relaxed mb-6">
+      <p className="text-[15px] text-[#75726c] leading-relaxed mb-6">
         AI는 부를 때마다 회사가 비용을 냅니다. 어디에 돈을 쓰고 어디서 아낄지를 함께 정하지 않으면 이 기획은 완성이 아닙니다.
       </p>
 
@@ -853,13 +853,13 @@ function Section7() {
               </button>
               {isOpen && (
                 <div className="px-4 pb-4 space-y-3">
-                  <p className="text-[13px] text-[#75726c] leading-relaxed">{item.body}</p>
+                  <p className="text-[14.5px] text-[#75726c] leading-relaxed">{item.body}</p>
                   {item.chips.length > 0 && (
                     <div className="flex flex-wrap gap-2">
                       {item.chips.map((chip) => (
                         <div key={chip.label} className="flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-[#f0eee7] border border-black/[0.07]">
-                          <span className="text-[#55534f] text-[12px]">{chip.label}</span>
-                          <span className="font-mono text-[10px] text-[#b8862e]">→ {chip.tag}</span>
+                          <span className="text-[#55534f] text-[13.5px]">{chip.label}</span>
+                          <span className="font-mono text-[11.5px] text-[#b8862e]">→ {chip.tag}</span>
                         </div>
                       ))}
                     </div>
@@ -886,7 +886,7 @@ function SectionAppendix() {
           </div>
           <div>
             <div className="text-[#2b2a28] font-medium text-sm mb-1">생성 비율 미리보기</div>
-            <p className="text-[13px] text-[#75726c] leading-relaxed">
+            <p className="text-[14.5px] text-[#75726c] leading-relaxed">
               생성 비율(4:5, 1:1 등) 선택 시 숫자만으로는 결과물의 형태를 체감하기 어렵습니다. 비율을 탭하면 미리보기 프레임이 해당 비율로 바뀌어 보이는 방식이면, 생성 전에 결과의 쓰임새(피드용, 썸네일용)를 판단하기 쉬워질 것입니다.
             </p>
           </div>
@@ -942,9 +942,9 @@ export default function App() {
               </div>
             </button>
             <div className="flex items-baseline gap-2">
-              <span className="font-mono text-[#b8862e] text-[11px] tracking-widest">MODOAI</span>
-              <span className="text-[#75726c] text-[11px]">/</span>
-              <span className="text-[#75726c] text-[11px]">수정 에이전트 PRD</span>
+              <span className="font-mono text-[#b8862e] text-[12.5px] tracking-widest">MODOAI</span>
+              <span className="text-[#75726c] text-[12.5px]">/</span>
+              <span className="text-[#75726c] text-[12.5px]">수정 에이전트 PRD</span>
             </div>
           </div>
           <div className="flex items-center gap-3">
@@ -958,16 +958,16 @@ export default function App() {
         {/* Sidebar */}
         <aside className={`fixed lg:sticky top-12 h-[calc(100vh-3rem)] w-56 shrink-0 border-r border-black/[0.05] bg-[#faf8f4] flex flex-col z-40 transition-transform duration-200 ${sidebarOpen ? "translate-x-0" : "-translate-x-full lg:translate-x-0"}`}>
           <div className="flex-1 overflow-y-auto p-4 pt-6 space-y-0.5">
-            <div className="font-mono text-[9px] text-[#75726c] tracking-[0.15em] px-3 mb-3">목차</div>
+            <div className="font-mono text-[10.5px] text-[#75726c] tracking-[0.15em] px-3 mb-3">목차</div>
             {SECTIONS.map((s) => {
               const isActive = activeSection === s.id;
               return (
                 <button
                   key={s.id}
                   onClick={() => scrollTo(s.id)}
-                  className={`w-full text-left flex items-center gap-2.5 px-3 py-2 rounded-md text-[12px] transition-all duration-150 ${isActive ? "bg-[#b8862e]/10 text-[#b8862e]" : "text-[#75726c] hover:text-[#55534f] hover:bg-black/[0.03]"}`}
+                  className={`w-full text-left flex items-center gap-2.5 px-3 py-2 rounded-md text-[13.5px] transition-all duration-150 ${isActive ? "bg-[#b8862e]/10 text-[#b8862e]" : "text-[#75726c] hover:text-[#55534f] hover:bg-black/[0.03]"}`}
                 >
-                  <span className="font-mono text-[10px] shrink-0 opacity-60">{s.num}</span>
+                  <span className="font-mono text-[11.5px] shrink-0 opacity-60">{s.num}</span>
                   <span>{s.title}</span>
                   {isActive && <ChevronRight size={10} className="ml-auto" />}
                 </button>
@@ -975,8 +975,8 @@ export default function App() {
             })}
           </div>
           <div className="p-4 border-t border-black/[0.05]">
-            <div className="text-[11px] text-[#75726c]">변세영</div>
-            <div className="font-mono text-[10px] text-[#75726c]/60">유니드컴즈 · AI Native</div>
+            <div className="text-[12.5px] text-[#75726c]">변세영</div>
+            <div className="font-mono text-[11.5px] text-[#75726c]/60">유니드컴즈 · AI Native</div>
           </div>
         </aside>
 
@@ -984,7 +984,7 @@ export default function App() {
         <main className="flex-1 min-w-0 px-8 lg:px-12 py-12 max-w-3xl">
           {/* Hero */}
           <div className="mb-16">
-            <div className="font-mono text-[10px] text-[#75726c] tracking-widest mb-4">PRODUCT REQUIREMENTS DOCUMENT</div>
+            <div className="font-mono text-[11.5px] text-[#75726c] tracking-widest mb-4">PRODUCT REQUIREMENTS DOCUMENT</div>
             <h1 className="text-3xl font-medium text-[#2b2a28] leading-tight mb-3">ModoAI 수정 에이전트 설계</h1>
             <p className="text-[#75726c] text-sm leading-relaxed mb-6">
               모호한 수정 요청을 실행 전에 구체화하고, 실행 후에는 해석이 의도와 맞았는지 제품이 스스로 검증하는 에이전트를 설계합니다.
@@ -1009,7 +1009,7 @@ export default function App() {
           <div className="flex justify-center pt-8 border-t border-black/[0.05]">
             <button
               onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
-              className="flex items-center gap-2 text-[#75726c] hover:text-[#2b2a28] text-[12px] font-mono transition-colors"
+              className="flex items-center gap-2 text-[#75726c] hover:text-[#2b2a28] text-[13.5px] font-mono transition-colors"
             >
               <ArrowUp size={12} /> 맨 위로
             </button>
