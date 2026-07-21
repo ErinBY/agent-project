@@ -62,7 +62,7 @@ function Section1() {
   ];
 
   return (
-    <section id="s1" className="mb-20">
+    <section id="s1" className="mb-20 scroll-mt-20">
       <SectionHeader num="SECTION 01" title="개선 과제 정의" />
 
       <div className="space-y-5 text-[#55534f] leading-[1.85] text-[16px] mb-8">
@@ -107,7 +107,7 @@ function Section2() {
   ];
 
   return (
-    <section id="s2" className="mb-20">
+    <section id="s2" className="mb-20 scroll-mt-20">
       <SectionHeader num="SECTION 02" title="목표와 성공 기준" />
 
       <div className="p-4 rounded-lg bg-[#f0eee7] border border-black/[0.06] mb-8">
@@ -229,7 +229,7 @@ function Section3() {
   const [active, setActive] = useState<number | null>(null);
 
   return (
-    <section id="s3" className="mb-20">
+    <section id="s3" className="mb-20 scroll-mt-20">
       <SectionHeader num="SECTION 03" title="Agentic Workflow" subtitle="수정 에이전트는 어떤 순서로 일하는가" />
 
       <p className="text-[15px] text-[#75726c] leading-relaxed mb-8">
@@ -483,7 +483,7 @@ function Section4() {
   };
 
   return (
-    <section id="s4" className="mb-20">
+    <section id="s4" className="mb-20 scroll-mt-20">
       <SectionHeader num="SECTION 04" title="구성요소 정의" subtitle="에이전트에게 무엇을 쥐여줄 것인가" />
 
       <div className="flex gap-1 mb-6 overflow-x-auto pb-1">
@@ -559,7 +559,7 @@ function Section5() {
   const current = S5_CATEGORIES.find((c) => c.id === cat)!;
 
   return (
-    <section id="s5" className="mb-20">
+    <section id="s5" className="mb-20 scroll-mt-20">
       <SectionHeader num="SECTION 05" title="정책·예외 케이스" subtitle="틀리면 어떻게 되는가" />
 
       <div className="p-4 rounded-lg bg-[#b8862e]/5 border border-[#b8862e]/20 mb-6">
@@ -747,7 +747,7 @@ function Section6() {
   const current = SCREENS.find((s) => s.id === screen)!;
 
   return (
-    <section id="s6" className="mb-20">
+    <section id="s6" className="mb-20 scroll-mt-20">
       <SectionHeader num="SECTION 06" title="화면 설계" subtitle="사용자 눈에는 어떻게 보이는가" />
 
       <p className="text-[15px] text-[#75726c] leading-relaxed mb-6">
@@ -831,7 +831,7 @@ function Section7() {
   const [open, setOpen] = useState<string | null>("①");
 
   return (
-    <section id="s7" className="mb-20">
+    <section id="s7" className="mb-20 scroll-mt-20">
       <SectionHeader num="SECTION 07" title="원가·운영 관점" subtitle="이걸 돌리면 돈이 얼마나 드는가" />
 
       <p className="text-[15px] text-[#75726c] leading-relaxed mb-6">
@@ -877,7 +877,7 @@ function Section7() {
 // ——— APPENDIX ———
 function SectionAppendix() {
   return (
-    <section id="sa" className="mb-20">
+    <section id="sa" className="mb-20 scroll-mt-20">
       <SectionHeader num="부록" title="그 외 관찰한 UX 개선점" />
       <div className="p-5 rounded-lg border border-black/[0.07] bg-[#ffffff]">
         <div className="flex items-start gap-3">
